@@ -1,43 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Transaction Marketplace</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Food Table</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    th,
+    td {
+      text-align: center;
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .header h2 {
+      margin: 0;
+    }
+
+    .header a {
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#" id="dairy-link">Dairy</a></li>
-        <li><a href="#" id="meat-link">Meat</a></li>
-        <li><a href="#" id="fruit-veggies-link">Fruit + Veggies</a></li>
-        <li><a href="#" id="other-link">Other</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <table id="data-table">
-      <thead>
-        <tr>
-          <th>Quantity</th>
-          <th>pH Level</th>
-          <th>Moisture</th>
-          <th>Texture</th>
-          <th>Placeholder</th>
-          <th>Placeholder</th>
-          <th>Placeholder</th>
-          <th>Placeholder</th>
-          <th>Placeholder</th>
-          <th>Placeholder</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-  </main>
-  <script src="script.js"></script>
+  <div class="header">
+    <h2>Food Table</h2>
+    <a href="dairy.html">Dairy</a>
+    <a href="meat.html">Meat</a>
+    <a href="fv.html">Fruit + Veggies</a>
+    <a href="other.html">Other</a>
+  </div>
+  <h1>Food Data</h1>
+  <p>Select a category to view the data:</p>
 </body>
 
 </html>
