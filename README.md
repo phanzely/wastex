@@ -1,1 +1,1 @@
-# wastex
+# wastex.github.io
