@@ -20,17 +20,38 @@ otherLink.addEventListener("click", function () {
   loadData("other");
 });
 
-function loadData(category) {
-  const data = [
-    ["1", "7.0", "50%", "Soft", "", "", "", "", "", ""],
-    ["2", "6.5", "60%", "Firm", "", "", "", "", "", ""],
-    ["3", "6.0", "70%", "Hard", "", "", "", "", "", ""],
-    ["4", "5.5", "80%", "Crisp", "", "", "", "", "", ""],
-    ["5", "5.0", "90%", "Juicy", "", "", "", "", "", ""],
-    ["6", "4.5", "95%", "Tender", "", "", "", "", "", ""],
-    ["1", "7.0", "50%", "Soft", "", "", "", "", "", ""],
-    ["1", "7.0", "50%", "Soft", "", "", "", "", "", ""],
-    ["1", "7.0", "50%", "Soft", "", "", "", "", "", ""],
-    ["1", "7.0", "50%", "Soft", "", "", "", "", "", ""],
-  ]
+function showBuyPopup(quantity, price, seller, sku) {
+  const message = `Successfully bought ${quantity} at $${price} from ${seller} with SKU ${sku}.`;
+  alert(message);
 }
+
+const tableBody = document.querySelector('table tbody');
+
+const newRow = document.createElement('tr');
+
+const skuCell = document.createElement('td');
+skuCell.textContent = 'N16a727n82Sdf2t';
+newRow.appendChild(skuCell);
+
+const quantityCell = document.createElement('td');
+quantityCell.textContent = '1.5 metric tons';
+newRow.appendChild(quantityCell);
+
+const sellerCell = document.createElement('td');
+sellerCell.textContent = 'Cayuga Medical Ingredients';
+newRow.appendChild(sellerCell);
+
+const priceCell = document.createElement('td');
+priceCell.textContent = '$312.41';
+newRow.appendChild(priceCell);
+
+const buyCell = document.createElement('td');
+const buyButton = document.createElement('button');
+buyButton.textContent = 'BUY';
+buyButton.addEventListener('click', () => {
+  showBuyPopup(quantityCell.textContent, priceCell.textContent.slice(1), sellerCell.textContent, skuCell.textContent);
+});
+buyCell.appendChild(buyButton);
+newRow.appendChild(buyCell);
+
+tableBody.appendChild(newRow);
