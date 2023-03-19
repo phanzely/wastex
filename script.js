@@ -1,4 +1,4 @@
-const dairyLink = document.querySelector("dairy.html");
+const dairyLink = document.querySelector("https://phanzely.github.io/wastex/dairy.html");
 const meatLink = document.querySelector("#meat-link");
 const fruitVeggiesLink = document.querySelector("#fruit-veggies-link");
 const otherLink = document.querySelector("#other-link");
