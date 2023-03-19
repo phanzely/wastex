@@ -30,5 +30,5 @@ const newRow = document.createElement('tr');
 function showBuyPopup(sku, quantity, seller, price) {
   var popup = document.getElementById("buy-popup");
   popup.innerHTML = "Successfully bought 1.5 mega tons at price $312.41 from Cayuga Medical Ingredients with SKU N16a727n82Sdf2t";
-  popup.style.display = "block";
+  popup.classList.add("show"); // add the 'show' class to make the popup visible
 }
