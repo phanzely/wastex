@@ -60,6 +60,32 @@
       color: #222222;
       text-decoration: none;
     }
+
+    .buy-btn {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .buy-popup {
+      position: fixed;
+      background-color: white;
+      border: 1px solid #ccc;
+      z-index: 1;
+      padding: 20px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   </style>
 </head>
 
@@ -71,38 +97,43 @@
     <table>
       <thead>
         <tr>
+          <th>SKU</th>
+          <th>Seller</th>
           <th>Quantity</th>
+          <th>Price</th>
           <th>pH Level</th>
           <th>Moisture</th>
-          <th>Texture</th>
+          <th>Action</th>
+
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>20</td>
+          <td>SJM09ampiaups</td>
+          <td>Cayuga Medical Ingredients</td>
+          <td>0.2</td>
+          <td>$67.89</td>
           <td>4.5</td>
-          <td>80%</td>
-          <td> <a href="payment.html">
-              <img src="lock.png" width="20" height="20"></td>
-        </tr>
+          <td><a href="payment.html"><img src="lock.png" width="20" height="20"></a></td>
+          <td><button class="buy-btn"
+              onclick="showBuyPopup('N16a727n82Sdf2t', '1.5 metric tons', 'Cayuga Medical Ingredients', '$312.41')">BUY</button>
+          </td>
         <tr>
-          <td>30</td>
-          <td>4.0</td>
-          <td>85%</td>
-          <td> <a href="payment.html">
-              <img src="lock.png" width="20" height="20"></td>
-        </tr>
-        <tr>
-          <td>40</td>
+          <td>asdfn0043qmam</td>
+          <td>Cayuga Medical Ingredients</td>
           <td>3.5</td>
-          <td>90%</td>
-          <td> <a href="payment.html">
-              <img src="lock.png" width="20" height="20"></td>
+          <td>$400.41</td>
+          <td>4.6</td>
+          <td><a href="payment.html"><img src="lock.png" width="20" height="20"></a></td>
+          <td><button class="buy-btn"
+              onclick="showBuyPopup('N16a727n82Sdf2t', '1.5 metric tons', 'Cayuga Medical Ingredients', '$312.41')">BUY</button>
+          </td>
+
+
         </tr>
       </tbody>
     </table>
     <p><a href="index.html">Back to main page</a></p>
+
   </div>
 </body>
-
-</html>
