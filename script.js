@@ -3,6 +3,13 @@ const meatLink = document.querySelector("#meat-link");
 const fruitVeggiesLink = document.querySelector("#fruit-veggies-link");
 const otherLink = document.querySelector("#other-link");
 const dataTable = document.querySelector("#data-table");
+const buyBtns = document.querySelectorAll(".buy-btn");
+buyBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    showBuyPopup('N16a727n82Sdf2t', '1.5 metric tons', 'Cayuga Medical Ingredients', '$312.41');
+  });
+});
+
 
 
 dairyLink.addEventListener("click", function () {
